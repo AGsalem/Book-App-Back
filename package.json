@@ -1,0 +1,35 @@
+{
+  "scripts": {
+    "pnp": "bun --watch index.ts | pino-pretty",
+    "start": "bun ./dist/index.js",
+    "go": "bun build ./index.ts --outdir ./dist --target node",
+    "dev": " tsx --watch  ./index.ts | pino-pretty"
+  },
+  "name": "server",
+  "version": "1.0.2",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsx": "^4.22.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@fastify/autoload": "^6.3.1",
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.2.0",
+    "@fastify/helmet": "^13.0.2",
+    "@fastify/jwt": "^10.1.0",
+    "@fastify/postgres": "^6.0.2",
+    "@fastify/rate-limit": "^11.0.0",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.8.5",
+    "fastify-plugin": "^6.0.0",
+    "nodemon": "^3.1.14",
+    "pg": "^8.21.0",
+    "pino-pretty": "^13.1.3"
+  }
+}
