@@ -1,12 +1,12 @@
 import { FastifyPluginAsync } from 'fastify';
-import { create } from '../controller/users/create';
-import { fake } from '../admin/fack';
-import { sign } from '../controller/users/Login';
-import { Dashboard } from '../controller/users/dashboard.user';
-import { logout } from '../controller/users/logout';
-import { setting } from '../controller/users/setting';
-import { update } from '../controller/users/update';
-import { cash } from '../controller/users/cash';
+import { create } from '../controller/users/create.js';
+import { fake } from '../admin/fack.js';
+import { sign } from '../controller/users/Login.js';
+import { Dashboard } from '../controller/users/dashboard.user.js';
+import { logout } from '../controller/users/logout.js';
+import { setting } from '../controller/users/setting.js';
+import { update } from '../controller/users/update.js';
+import { cash } from '../controller/users/cash.js';
 const users: FastifyPluginAsync = async (fastify): Promise<void> => {
     fastify.post('/signup', {
         schema: {

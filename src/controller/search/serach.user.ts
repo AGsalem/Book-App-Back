@@ -1,4 +1,4 @@
-import { ISE,ERRSCHEMA } from "../../common/err"
+import { ISE,ERRSCHEMA } from "../../common/err.js"
 export const searchUsers = async (request, reply) => {
     try {
 

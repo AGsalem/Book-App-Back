@@ -1,6 +1,6 @@
-import { ISE } from "../../common/err"
+import { ISE } from "../../common/err.js"
 export const updateBook = async (request, reply) => {
-    try { 
+    try {
 
     } catch (err) {
         return ISE(request, reply)

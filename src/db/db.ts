@@ -4,6 +4,6 @@ export default fp(async (db) => {
         await db.register(import('@fastify/postgres'), {
             connectionString: process.env.DB,
         })
-    } catch (err) { console.error(err) }
+    } catch (err:any) { console.error(err) }
 
 })

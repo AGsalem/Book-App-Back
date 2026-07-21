@@ -1,5 +1,5 @@
-import { ISE } from "../common/err"
-import { users, book, buy } from "../common/sql"
+import { ISE } from "../common/err.js"
+import { users, book, buy } from "../common/sql.js"
 export const admin = async (request, reply) => {
     try {
         const { id, name, pass } = <any>request.body

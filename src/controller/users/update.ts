@@ -1,4 +1,4 @@
-import { ISE, ERRLOGIN } from "../../common/err"
+import { ISE, ERRLOGIN } from "../../common/err.js"
 export const update = async (request, reply) => {
     try {
         const { username, password } = request.body as any
@@ -21,7 +21,7 @@ export const update = async (request, reply) => {
         reply.cookie("token", token, { httpOnly: true, secure: true, path: "/" })
         return reply.send({ "mes": nameofsearch })
     }
-    catch (err) {
+    catch (err:any) {
         if (err.code === ' Fastify.errorCodes.FST_ERR_VALIDATION') {
             return ERRLOGIN(request, reply)
         }

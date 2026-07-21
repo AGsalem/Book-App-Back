@@ -1,5 +1,5 @@
 import fastify from "fastify";
-import connection from "./src/connection";
+import connection from "./connection.js";
 
 import 'dotenv/config'
 const app = fastify({
@@ -11,7 +11,7 @@ app.ready(() => {
     console.log(app.printRoutes())
 })
 try {
-    app.listen({ port: port })
+    app.listen({ port: port ,host:"0.0.0.0"})
     console.log(`port in ${port}`)
 } catch (err) {
     console.log(err)

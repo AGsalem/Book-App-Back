@@ -1,4 +1,4 @@
-import { ISE } from "../../common/err"
+import { ISE } from "../../common/err.js"
 
 export const cash = async (request, reply) => {
     try {

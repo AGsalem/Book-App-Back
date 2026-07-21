@@ -1,4 +1,6 @@
-import { ISE,ERRSCHEMA } from "../../common/err"
+import { ISE,ERRSCHEMA } from "../../common/err.js"
+
+
 import "@fastify/postgres"
 import '@fastify/jwt'
 export const create = async (request, reply) => {
@@ -18,12 +20,10 @@ export const create = async (request, reply) => {
         const id = await row.id
         const token = await request.server.jwt.sign({ nameofsearch, username, id });
         reply.clearCookie("token")
-
         reply.setCookie('token', token, { httpOnly: true, secure: true, path: "/" })
         return reply.code(200).send({ "mes": "create account finsh" })
 
     } catch (err) {
-
         console.error(err)
         return reply.send({ "mess": "please go to login", username })
     }

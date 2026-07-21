@@ -1,4 +1,4 @@
-import { ERR, ERRLOGIN, ISE } from "../../common/err"
+import { ERR, ERRLOGIN, ISE } from "../../common/err.js"
 import "@fastify/postgres"
 import '@fastify/jwt'
 import "@fastify/cookie"
@@ -33,7 +33,7 @@ export const sign = async (request, reply) => {
                 return reply.code(400).send({ "mess": "have account go login" })
             }
         }
-    } catch (err) {
+    } catch (err:any) {
         if (err.code === ' Fastify.errorCodes.FST_ERR_VALIDATION') {
             return ERRLOGIN(request, reply)
         }

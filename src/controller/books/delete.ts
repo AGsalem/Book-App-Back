@@ -1,7 +1,7 @@
-import { ISE, ERRSCHEMA } from "../../common/err"
+import { ISE, ERRSCHEMA } from "../../common/err.js"
 export const deleteBook = async (request, reply) => {
-    try { 
-        
+    try {
+
     } catch (err) {
         return ISE(request, reply)
     }
